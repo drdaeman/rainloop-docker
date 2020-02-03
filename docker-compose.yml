@@ -1,0 +1,21 @@
+version: "3.7"
+
+volumes:
+  rainloop-data: {}
+
+services: 
+  rainloop:
+    image: rainloop-php
+    build: 
+      context: rainloop
+    volumes:
+      - type: volume
+        source: rainloop-data
+        target: /var/www/html/data
+  nginx:
+    image: rainloop-nginx
+    build:
+      context: nginx
+    ports:
+      - target: 80
+        published: 8080

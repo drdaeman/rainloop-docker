@@ -1,0 +1,14 @@
+# Temporary files
+*~
+*.tmp
+*.bak
+
+# Windows
+[Dd]esktop.ini
+Thumbs.db
+Thumbs.db:encryptable
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride

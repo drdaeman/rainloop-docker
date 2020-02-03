@@ -5,7 +5,7 @@ volumes:
 
 services: 
   rainloop:
-    image: rainloop-php
+    image: docker.pkg.github.com/drdaeman/rainloop-docker/rainloop-php:latest
     build: 
       context: rainloop
     volumes:
@@ -13,7 +13,7 @@ services:
         source: rainloop-data
         target: /var/www/html/data
   nginx:
-    image: rainloop-nginx
+    image: docker.pkg.github.com/drdaeman/rainloop-docker/rainloop-nginx:latest
     build:
       context: nginx
     ports:
